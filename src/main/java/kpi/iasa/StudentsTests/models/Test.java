@@ -2,9 +2,8 @@ package kpi.iasa.StudentsTests.models;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -19,4 +18,7 @@ public class Test {
     private String theme;
     private Integer questionNumber;
 
+    @OneToMany
+    @JoinColumn(referencedColumnName = "id")
+    private List<Question> questions;
 }

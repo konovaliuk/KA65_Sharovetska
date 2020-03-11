@@ -1,15 +1,10 @@
 package kpi.iasa.StudentsTests.models;
 
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import java.util.List;
+import javax.persistence.*;
 
 @Data
-@RequiredArgsConstructor
 @Entity
 @Table(name = "Question")
 public class Question {
@@ -25,4 +20,7 @@ public class Question {
 
     private String cost;
 
+    @ManyToOne
+    @JoinColumn
+    private Test test;
 }
