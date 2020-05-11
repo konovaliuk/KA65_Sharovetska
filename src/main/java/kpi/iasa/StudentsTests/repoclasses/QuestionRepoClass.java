@@ -1,7 +1,6 @@
-package kpi.iasa.StudentsTests.repositories.repoclasses;
+package kpi.iasa.StudentsTests.repoclasses;
 
-import kpi.iasa.StudentsTests.models.Question;
-import kpi.iasa.StudentsTests.repositories.QuestionRepository;
+import kpi.iasa.StudentsTests.repoclasses.repositories.QuestionRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 

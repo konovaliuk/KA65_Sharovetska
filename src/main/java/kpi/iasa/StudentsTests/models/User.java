@@ -20,26 +20,27 @@ public class User {
 
     @Column(unique = true)
     private String email;
+
+    private String login;
     private String password;
 
-    private String firstName;
-    private String lastName;
-
+    private String name;
     private String phone;
     private String role;
 
-    @OneToMany
-    @JoinColumn(referencedColumnName = "id")
+    @OneToMany(mappedBy = "user")
     private List<Result> results;
+
+    @OneToMany(mappedBy = "author")
+    private List<Test> tests;
 
     public User(UserToCreateDto dto) {
         this.email = dto.getEmail();
         this.password = dto.getPassword();
-        this.firstName = dto.getFirstName();
-        this.lastName = dto.getLastName();
+        this.login = dto.getLogin();
+        this.name = dto.getName();
         this.phone = dto.getPhone();
         this.role = dto.getRole();
-
     }
 
 }

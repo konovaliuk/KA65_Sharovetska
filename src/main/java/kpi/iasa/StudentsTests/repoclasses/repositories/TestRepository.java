@@ -1,4 +1,4 @@
-package kpi.iasa.StudentsTests.repositories;
+package kpi.iasa.StudentsTests.repoclasses.repositories;
 
 import kpi.iasa.StudentsTests.models.Test;
 import org.springframework.data.jpa.repository.JpaRepository;
